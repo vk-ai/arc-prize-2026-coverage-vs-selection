@@ -1,0 +1,54 @@
+NVARC-style selector + symbolic filters, OFFLINE CPU on existing pickles. Nothing submitted. Pass@2 output counts.
+score_aug = per-view NLL under 8 rescoring views; n = number of DFS guesses (occurrences) producing that grid.
+NVARC exact formula not published (writeup says 'occurrence count adjusted by geo-mean of aug log-probs'); variants below are our HYPOTHESIS reconstructions.
+
+[POOLED shard0 baseline+ttt32] outputs=80 oracle coverage=27
+selector                        none  size color   all
+kgmon                             19    19    19    19
+probmul3                          20    20    20    20
+nvarc: log(n) - meanNLL           20    20    20    20
+nvarc: 2log(n) - meanNLL          19    19    19    19
+nvarc: log(n) - 0.5 meanNLL       19    19    19    19
+geomean only (-meanNLL)           19    19    19    19
+filter size: candidates kept 969/1053; correct answers removed 1
+filter color: candidates kept 1052/1053; correct answers removed 0
+filter all: candidates kept 968/1053; correct answers removed 1
+
+[baseline shard0 only] outputs=74 oracle coverage=23
+selector                        none  size color   all
+kgmon                             18    18    18    18
+probmul3                          18    18    18    18
+nvarc: log(n) - meanNLL           18    18    18    18
+nvarc: 2log(n) - meanNLL          18    18    18    18
+nvarc: log(n) - 0.5 meanNLL       18    18    18    18
+geomean only (-meanNLL)           18    18    18    18
+filter size: candidates kept 556/599; correct answers removed 1
+filter color: candidates kept 599/599; correct answers removed 0
+filter all: candidates kept 556/599; correct answers removed 1
+
+[ttt32 shard0 only] outputs=78 oracle coverage=23
+selector                        none  size color   all
+kgmon                             18    18    18    18
+probmul3                          18    18    18    18
+nvarc: log(n) - meanNLL           18    18    18    18
+nvarc: 2log(n) - meanNLL          18    18    18    18
+nvarc: log(n) - 0.5 meanNLL       18    18    18    18
+geomean only (-meanNLL)           19    19    19    19
+filter size: candidates kept 589/643; correct answers removed 1
+filter color: candidates kept 642/643; correct answers removed 0
+filter all: candidates kept 588/643; correct answers removed 1
+
+[shard1 baseline (held-out check)] outputs=79 oracle coverage=28
+selector                        none  size color   all
+kgmon                             24    24    24    24
+probmul3                          24    24    24    24
+nvarc: log(n) - meanNLL           24    24    24    24
+nvarc: 2log(n) - meanNLL          23    23    23    23
+nvarc: log(n) - 0.5 meanNLL       23    23    23    23
+geomean only (-meanNLL)           23    23    23    23
+filter size: candidates kept 521/601; correct answers removed 5
+filter color: candidates kept 600/601; correct answers removed 0
+filter all: candidates kept 520/601; correct answers removed 5
+
+Reference: kgmon pooled 19/80; honest CV-calibrated 22/80 (results/pooled_rerank_vs_kgmon.txt).
+Verdict: NVARC-style log(n)-meanNLL = 20/80 pooled (kgmon 19, CV-calib 22); 24/79 on shard1 = kgmon. Symbolic filters change no picks; shape filter drops correct answers (1 shard0 pooled, 5 shard1).

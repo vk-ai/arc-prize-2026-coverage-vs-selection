@@ -1,0 +1,2 @@
+n=2 {'tasks': 57, 'batches': 324, 'unequal_new': 0, 'unequal_old': 0, 'mismatch_n2': 0, 'sizes': {4: 324}}
+n=4 {'tasks': 57, 'batches': 648, 'unequal_new': 0, 'unequal_old': 200, 'mismatch_n2': 0, 'sizes': {4: 648}}

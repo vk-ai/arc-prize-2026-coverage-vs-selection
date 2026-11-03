@@ -1,0 +1,27 @@
+Re-ranking the POOLED shard0 candidates (baseline + ttt32) — ALL ROWS OFFLINE / HYPOTHESIS, no GPU, nothing submitted
+Scripts: results/pooled_shard0/rerank.py, rerank_cv.py ; metrics: rerank_metrics.json, rerank_cv_metrics.json
+Pass@2 = correct grid in chosen top-2. Denominators: 72 common outputs / 80 outputs in either run.
+Keep-list = 19 outputs kgmon already gets right on the pool. Missed = 8 covered but not in kgmon top-2:
+ 142ca369/0 20270e3b/0 58490d8a/0 62593bfd/1 78332cb0/0 8f3a5a89/0 b5ca7ac4/0 dfadab01/0
+
+variant                          common72  either80  converted/8  lost/19
+kgmon (current)                     17        19         0           0
+probmul3                            18        20         1           0
+count only                          16        17         1           3
+meanaug / bestaug                   17        19         1           1
+rrf(kgmon,probmul3)                 18        20         1           0
+kgmon a1 + probmul3 a2              18        20         1           0
+kgmon + lowconf(share<.5)->pm a2    18        20         1           0
+--- LEAKED (theta.json all-data fit includes these tasks; NOT valid evidence) ---
+calib theta.json                    22        24         6           1
+rrf(kgmon,pm,calib)                 19        21         2           0
+kgmon a1 + calib a2                 21        23         4           0
+--- HONEST held-out (5-fold by task; refit theta per fold) ---
+calib, trained shard1 only          18        20         2           1
+calib, shard1 + other pooled folds  20        22         4           1
+kgmon a1 + calibCV a2 (same)        20        22         4           1
+
+Best honest: calibrated PoE refit on pooled data with task-level CV: 22/80 (27.5%) vs kgmon 19/80 (23.8%);
+20/72 vs 17/72 on common. Net +3 outputs. Caveats: n is tiny (3 outputs), and the
+single-run full-eval A2 previously LOST to kgmon (28.40% vs 29.32%), so treat as unconfirmed.
+Cheapest no-fit win: probmul3 / rrf(kgmon,probmul3): +1 output, 0 lost.

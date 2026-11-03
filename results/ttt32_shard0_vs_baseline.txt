@@ -1,0 +1,8 @@
+cands_shard0 subkeys 77 scorable 74 unique cands 626 coverage 23 kgmon top2 18 tasks 54
+ttt32_shard0/cands subkeys 81 scorable 78 unique cands 678 coverage 23 kgmon top2 18 tasks 57
+common subkeys 72
+cov base 22 cov ttt32 22
+covered only by ttt32 [('62593bfd', 1), ('80a900e0', 0), ('8f3a5a89', 0), ('b5ca7ac4', 0)]
+covered only by base [('2d0172a1', 0), ('58490d8a', 0), ('78332cb0', 1), ('9aaea919', 0)]
+top2 gained [('80a900e0', 0), ('8f3a5a89', 0), ('b5ca7ac4', 0)] top2 lost [('2d0172a1', 0), ('78332cb0', 1), ('9aaea919', 0)]
+union coverage 27

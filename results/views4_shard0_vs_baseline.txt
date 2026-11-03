@@ -1,0 +1,29 @@
+views4_shard0 vs baseline (cands_shard0) — OFFLINE, nothing submitted
+cands_shard0  subkeys 77 scorable 74 unique cands 626 coverage 23 kgmon top2 18 tasks 54 task_score 13.0
+views4_shard0 subkeys 81 scorable 78 unique cands 730 coverage 25 kgmon top2 20 tasks 58 task_score 15.0
+ttt32_shard0  subkeys 81 scorable 78 unique cands 678 coverage 23 kgmon top2 18 tasks 57 task_score 14.0
+common subkeys 71
+cov base 23 cov views4 24
+covered only by views4 [('80a900e0', 0), ('8e5c0c38', 0), ('8f3a5a89', 0), ('b5ca7ac4', 0)]
+covered only by base [('58490d8a', 0), ('7ed72f31', 1)]
+top2 gained [('80a900e0', 0), ('8e5c0c38', 0), ('b5ca7ac4', 0)] top2 lost [('7ed72f31', 1)]
+union coverage (base|views4) 27
+union coverage (base|ttt32|views4) 28
+
+Pooled metrics (kgmon top-2):
+  common_base_views4     baseline     keys=71 cov=23 top2=18 task_score=13.0
+  common_base_views4     views4       keys=71 cov=24 top2=19 task_score=14.0
+  common_base_views4     pooled_bv    keys=71 cov=26 top2=19 task_score=13.5
+  common_base_views4     pooled_all3  keys=71 cov=27 top2=19 task_score=13.5
+  union_base_views4      baseline     keys=81 cov=23 top2=18 task_score=13.0
+  union_base_views4      views4       keys=81 cov=25 top2=20 task_score=15.0
+  union_base_views4      pooled_bv    keys=81 cov=27 top2=20 task_score=14.5
+  union_base_views4      pooled_all3  keys=81 cov=28 top2=20 task_score=14.5
+  union_all3             baseline     keys=82 cov=23 top2=18 task_score=13.0
+  union_all3             views4       keys=82 cov=25 top2=20 task_score=15.0
+  union_all3             pooled_bv    keys=82 cov=27 top2=20 task_score=14.5
+  union_all3             pooled_all3  keys=82 cov=28 top2=20 task_score=14.5
+
+Success bar (prior): coverage ≥26, kgmon pass@2 ≥18
+views4 alone: cov=25 top2=20 → below bar
+pooled base+views4 union: cov=27 top2=20

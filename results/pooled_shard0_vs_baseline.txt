@@ -1,0 +1,17 @@
+Pooled shard0 (baseline cands_shard0 + ttt32_shard0/cands) — OFFLINE HYPOTHESIS, not a live notebook run
+Script: results/pooled_shard0/pool_score.py ; metrics: results/pooled_shard0/metrics.json
+Pooling: per (task,test_idx), union candidates deduped by grid md5; guesses lists concatenated, so kgmon
+(len(guesses) - mean score_aug) sums sample counts across runs. Ground truth: data_repo/data/evaluation.
+
+                       keys  coverage(any-correct)  kgmon top-2 (pass@2 outputs)
+Common 72  baseline     72   22 (30.6%)             17 (23.6%)
+Common 72  ttt32        72   22 (30.6%)             17 (23.6%)
+Common 72  POOLED       72   25 (34.7%)             17 (23.6%)
+Union 80   baseline     80   23 (28.8%)             18 (22.5%)
+Union 80   ttt32        80   23 (28.8%)             18 (22.5%)
+Union 80   POOLED       80   27 (33.8%)             19 (23.8%)
+Task-score (mean per task over outputs), union 58 tasks: baseline 13.0, ttt32 14.0, pooled 14.0.
+(Kaggle-reported 14.5/57 for ttt32 differs from this offline recompute 14.0 — local scorer/task-count mismatch, not investigated.)
+
+Finding: pooling raises coverage +4 outputs but kgmon top-2 only +1 on union and +0 on common keys.
+Bottleneck has shifted to selection over the pooled set (8 covered-but-not-selected on union).

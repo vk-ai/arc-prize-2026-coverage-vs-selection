@@ -1,0 +1,148 @@
+{
+ "n_outputs": 151,
+ "n_tasks": 108,
+ "n_uncovered": 100,
+ "n_covered": 51,
+ "auroc_none_cv": [
+  0.8513725490196078,
+  0.8631372549019608,
+  0.8449019607843137,
+  0.8484313725490196,
+  0.8552941176470589
+ ],
+ "auroc_none_cv_mean": 0.852627450980392,
+ "auroc_single": {
+  "log_n_cand": 0.5145098039215686,
+  "log_n_samples": 0.7566666666666666,
+  "top1_share": 0.7174509803921569,
+  "best_beam": 0.8190196078431372,
+  "top1_aug_mean": 0.7733333333333333,
+  "top1_aug_min": 0.8254901960784313,
+  "top1_aug_spread": 0.703921568627451,
+  "margin12": 0.7248039215686275,
+  "agree_top2": 0.6810784313725491,
+  "log_out_cells": 0.5338235294117647,
+  "n_train": 0.5735294117647058,
+  "n_test": 0.5029411764705882,
+  "verifier_trainfit": 0.5797058823529412,
+  "missing": 0.52
+ },
+ "auroc_single_signed": {
+  "log_n_cand": 0.5145098039215686,
+  "log_n_samples": 0.24333333333333335,
+  "top1_share": 0.2825490196078431,
+  "best_beam": 0.8190196078431372,
+  "top1_aug_mean": 0.7733333333333333,
+  "top1_aug_min": 0.8254901960784313,
+  "top1_aug_spread": 0.703921568627451,
+  "margin12": 0.27519607843137256,
+  "agree_top2": 0.31892156862745097,
+  "log_out_cells": 0.5338235294117647,
+  "n_train": 0.5735294117647058,
+  "n_test": 0.4970588235294118,
+  "verifier_trainfit": 0.5797058823529412,
+  "missing": 0.52
+ },
+ "weights_full_std": {
+  "log_n_cand": 0.1049471115707398,
+  "log_n_samples": -1.1075839068955655,
+  "top1_share": -0.2931644308209668,
+  "best_beam": 0.6560387459939591,
+  "top1_aug_mean": 0.6988931581494391,
+  "top1_aug_min": 0.9154927000639177,
+  "top1_aug_spread": -0.16412922174229577,
+  "margin12": -0.17315901909475412,
+  "agree_top2": 0.04131300114821856,
+  "log_out_cells": -1.0290486475900262,
+  "n_train": 0.5614901349185484,
+  "n_test": -0.44099178800187694,
+  "verifier_trainfit": 0.8876946866200613,
+  "missing": 0.06469866342900098
+ },
+ "realloc_curve": [
+  {
+   "K%": 5,
+   "n_outputs": 8,
+   "frac_uncovered_hit": 0.08,
+   "frac_covered_rerun": 0.0
+  },
+  {
+   "K%": 10,
+   "n_outputs": 15,
+   "frac_uncovered_hit": 0.15,
+   "frac_covered_rerun": 0.0
+  },
+  {
+   "K%": 20,
+   "n_outputs": 30,
+   "frac_uncovered_hit": 0.3,
+   "frac_covered_rerun": 0.0
+  },
+  {
+   "K%": 30,
+   "n_outputs": 45,
+   "frac_uncovered_hit": 0.45,
+   "frac_covered_rerun": 0.0
+  },
+  {
+   "K%": 40,
+   "n_outputs": 60,
+   "frac_uncovered_hit": 0.55,
+   "frac_covered_rerun": 0.09803921568627451
+  },
+  {
+   "K%": 50,
+   "n_outputs": 76,
+   "frac_uncovered_hit": 0.69,
+   "frac_covered_rerun": 0.13725490196078433
+  },
+  {
+   "K%": 60,
+   "n_outputs": 91,
+   "frac_uncovered_hit": 0.77,
+   "frac_covered_rerun": 0.27450980392156865
+  },
+  {
+   "K%": 70,
+   "n_outputs": 106,
+   "frac_uncovered_hit": 0.88,
+   "frac_covered_rerun": 0.35294117647058826
+  },
+  {
+   "K%": 80,
+   "n_outputs": 121,
+   "frac_uncovered_hit": 0.93,
+   "frac_covered_rerun": 0.5490196078431373
+  },
+  {
+   "K%": 90,
+   "n_outputs": 136,
+   "frac_uncovered_hit": 0.97,
+   "frac_covered_rerun": 0.7647058823529411
+  },
+  {
+   "K%": 100,
+   "n_outputs": 151,
+   "frac_uncovered_hit": 1.0,
+   "frac_covered_rerun": 1.0
+  }
+ ],
+ "n_covered_top2ok": 42,
+ "auroc_select_cv": [
+  0.7328042328042328,
+  0.8095238095238095,
+  0.7380952380952381,
+  0.798941798941799,
+  0.7433862433862434
+ ],
+ "auroc_select_margin": 0.7751322751322751,
+ "pass2": {
+  "n_tasks": 63,
+  "est_runtime_h": 6.0,
+  "assumptions": "20 min/puzzle/GPU x 4 GPUs + 0.75 h overhead",
+  "uncovered_tasks_total": 75,
+  "uncovered_tasks_in_list": 57,
+  "uncovered_tasks_in_random": 40,
+  "overlap_list_random": 36
+ }
+}

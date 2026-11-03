@@ -1,0 +1,13 @@
+cands_shard1   subkeys 81 scorable 79 cands 607 coverage 28 kgmon_top2 24 tasks 59
+views4_shard1  subkeys 78 scorable 76 cands 799 coverage 27 kgmon_top2 21 tasks 57
+pooled_b+v4    subkeys 82 scorable 80 cands 1069 coverage 31 kgmon_top2 23 tasks 59
+common scorable 75 cov base 27 cov views4 27 top2 base 23 top2 views4 21
+covered only by views4 [('269e22fb', 1), ('28a6681f', 0), ('4c7dc4dd', 1)]
+covered only by base [('221dfab4', 0), ('4c7dc4dd', 0), ('7b0280bc', 0), ('d8e07eb2', 1)]
+top2 gained [] top2 lost [('7b0280bc', 0), ('d8e07eb2', 1), ('eee78d87', 0)]
+union coverage 31
+calibCV[shard0_only] {'pass2': 23, 'gained_vs_kgmon': 1, 'lost_vs_kgmon': 1}
+km1+calibCV2[shard0_only] {'pass2': 24, 'gained_vs_kgmon': 1, 'lost_vs_kgmon': 0}
+calibCV[shard0+otherfolds] {'pass2': 24, 'gained_vs_kgmon': 1, 'lost_vs_kgmon': 0}
+km1+calibCV2[shard0+otherfolds] {'pass2': 24, 'gained_vs_kgmon': 1, 'lost_vs_kgmon': 0}
+kgmon pooled pass2 23 outputs 80
